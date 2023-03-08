@@ -1,0 +1,1059 @@
+/* Default settings */
+
+:root {
+    --bg-black: hsl(0, 0%, 8%);
+    --bg-footer: hsl(0, 0%, 14%);
+    --text-one: hsl(0, 0%, 100%);
+    --text-two: hsl(0, 0%, 85%);
+    --accent: hsl(153, 71%, 59%);
+    --invalid: hsl(7, 100%, 68%);
+    --fs-88: 5.5rem;
+    --fs-48: 3rem;
+    --fs-24: 1.5rem;
+    --fs-18: 1.125rem;
+}
+
+*, 
+*::before, 
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: "Space Grotesk", sans-serif;
+    font-size: var(--fs-18);
+    background-color: var(--bg-black);
+    color: var(--text-one);
+    line-height: 28px;
+    overflow-x: hidden;
+}
+
+/* header mobile*/
+
+@media (max-width: 459px) {
+    header{
+        width: calc(100% -3.75rem);
+        height: 383px;
+    }
+}
+
+/* global nav styles */
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 92px;
+    margin-top: 20px;
+}
+
+.logo{
+    text-decoration: none;
+    color: var(--text-one);
+    font-size: 32px;
+}
+
+.nav_list{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 153.99px;
+}
+
+/* styling contents for mobile */
+
+@media (max-width: 459px) {
+
+    body{
+        background-image: url(./assets//images/pattern-rings.svg), url(./assets/images/pattern-rings.svg), url(./assets/images/pattern-circle.svg);
+        background-repeat: no-repeat;
+        background-position: top 8rem left -20rem, top 65rem right -20rem, top 15.875rem right -25%;
+    }
+
+    nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        height: 92px;
+        margin-top: 20px;
+    }
+
+    .logo_container{
+        z-index: 20;
+    }
+
+    .logo{
+        text-decoration: none;
+        color: var(--text-one);
+        font-size: 32px;
+        cursor: pointer;
+        z-index: 15;
+    }
+
+    .nav_list{
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 153.99px;
+    }
+
+    .nav_list{
+        z-index: 19;
+    }
+
+    .intro{
+        margin-top: -112px;
+        width: 80vw;
+        margin-inline: auto;
+    }
+
+    .intro_img{
+        background-image: url(./assets/images/profile-mobile.png);
+        background-position: center;
+        background-size: cover;
+        width: 174px;
+        height: 383px;
+        transform: translate(-50%);
+        margin-left: 50%;
+    }
+
+    .intro_left{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        height: 244px;
+        margin-top: 45px;
+    }
+
+    .intro_title{
+        font-size: 40px;
+        line-height: 40px;
+    }
+
+    .name_underline{
+        text-decoration: underline 4px var(--accent);
+    }
+
+    .intro_description{
+        font-size: 16px;
+        line-height: 26px;
+        color: var(--text-two);
+    }
+
+    .intro_btn,
+    .view_btn,
+    .code_btn{
+        font-family: "Space Grotesk", sans-serif;
+        font-family: 16px;
+        text-transform: uppercase;
+        background-color: transparent;
+        letter-spacing: 2.29px;
+        border: none;
+        border-bottom: 2px solid var(--accent);
+        width: 120px;
+        height: 38px;
+        color: var(--text-one);
+        cursor: pointer;
+    }
+
+    .skills{
+        width: calc(100% -3.75rem);
+        height: 302px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: default;
+    }
+
+    .skill_list{
+        width: calc(100% -3.75rem);
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .skill{
+        width: 345px;
+        height: 67px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .skill_title{
+        font-size: 32px;
+    }
+
+    .line_top{
+        margin-inline: auto;
+        margin-top: 383px;
+        background-color: var(--text-two);
+        width: 80vw;
+        height: 1px;
+    }
+
+    .line_bottom{
+        margin-inline: auto;
+        background-color: var(--text-two);
+        width: 80vw;
+        height: 1px;
+    }
+
+    .project_header{
+        margin-top: 5rem;
+        margin-inline: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 80vw;
+    }
+
+    .project_title{
+        font-size: 40px;
+    }
+
+    .projects_container{
+        margin-inline: auto;
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 21.4375;
+        margin-top: 2.5rem;
+        gap: 2.5rem;
+    }
+
+    .project_card{
+        height: 398px;
+        width: 343px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-direction: column;
+        margin-inline: auto;
+    }
+
+    .project_img{
+        height: 253px;
+        width: 343px;
+    }
+
+    .project_name{
+        text-transform: uppercase;
+    }
+
+    .languages{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .lang{
+        color: var(--text-two);
+        margin-right: 1rem;
+    }
+
+    .project_btns{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .project_link,
+    .code_link{
+        text-decoration: none;
+        color: var(--text-one);
+    }
+
+    .view_btn{
+        margin-right: 2rem;
+    }
+
+    footer{
+        background-image: url(./assets//images/pattern-rings.svg);
+        background-repeat: no-repeat;
+        background-position: top 40rem left -20rem;
+        width: 100vw;
+        height: 42.125rem;
+        background-color: var(--bg-footer);
+        padding: 5rem 0rem;
+        margin-top: 5rem;
+    }
+
+    .footer_container{
+        width: 80vw;
+        margin-inline: auto;
+    }
+
+    .footer_text{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        height: 10.625rem;
+    }
+
+    .footer_title{
+        font-size: 2.5rem;
+    }
+
+    .footer_description{
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .contact_container{
+        height: 20.4375rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        flex-direction: column;
+        margin-top: 5rem;
+    }
+
+    #input_name,
+    #input_email,
+    #input_msg{
+        width: 100%;
+        background-color: transparent;
+        border: none;
+        border-bottom: 1px solid var(--text-two);
+        outline: none;
+        padding: 1rem;
+        color: var(--text-one);
+        font-family: "Space Grotesk";
+    }
+
+    .error{
+        width: 100%;
+        background-color: transparent;
+        border: none;
+        border-bottom: 1px solid var(--invalid);
+        outline: none;
+        padding: 1rem;
+        color: var(--text-one);
+        font-family: "Space Grotesk";
+    }
+
+    #input_msg{
+        height: 107px;
+    }
+
+    #input_name::placeholder,
+    #input_email::placeholder,
+    #input_msg::placeholder{
+        color: var(--text-two);
+        font-family: "Space Grotesk";
+        font-size: 16px;
+    }
+
+    .name_error_msg,
+    .email_error_msg{
+        color: var(--invalid);
+        font-size: 12px;
+        display: none;
+    }
+
+    .send_msg_btn{
+        font-family: "Space Grotesk", sans-serif;
+        font-family: 16px;
+        text-transform: uppercase;
+        background-color: transparent;
+        letter-spacing: 2.29px;
+        border: none;
+        border-bottom: 2px solid var(--accent);
+        width: 8.875rem;
+        height: 38px;
+        color: var(--text-one);
+        cursor: pointer;
+    }
+}
+
+/* styling contents for tablet */
+
+@media (min-width: 460px) {
+
+    body{
+        background-image: url(./assets//images/pattern-rings.svg), url(./assets/images/pattern-rings.svg);
+        background-repeat: no-repeat;
+        background-position: top 8rem left -20rem, top 55rem right -15rem;
+    }
+
+    header{
+        margin-inline: auto;
+        width: 90vw;
+        height: 600px;
+        margin-inline: auto;
+    }
+
+    .nav_list{
+        z-index: 10;
+    }
+
+    .logo_container{
+        z-index: 20;
+    }
+
+    .logo{
+        cursor: pointer;
+        z-index: 15;
+    }
+
+    .intro{
+        height: 37.5rem;
+        width: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items:flex-end;
+        flex-direction: row-reverse;
+        margin-top: -112px;
+    }
+
+    .intro_img{
+        width: 20.125rem;
+        height: 37.5rem;
+        background-image: url(./assets/images/IMG_1263.jpg);
+        background-position: center;
+        background-size: cover;
+        margin-right: -41px;
+    }
+
+    .intro_left{
+        width: 27.8125rem;
+        height: 28.0625rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .intro_title{
+        font-size: 4.5rem;
+        line-height: 4.5rem;
+    }
+
+    .name_underline{
+        text-decoration: underline 4px var(--accent);
+    }
+
+    .intro_description{
+        font-size: var(--fs-18);
+        line-height: 28px;
+    }
+
+    .intro_btn,
+    .view_btn,
+    .code_btn{
+        font-family: "Space Grotesk", sans-serif;
+        font-family: 16px;
+        text-transform: uppercase;
+        background-color: transparent;
+        letter-spacing: 2.29px;
+        border: none;
+        border-bottom: 2px solid var(--accent);
+        width: 120px;
+        height: 38px;
+        color: var(--text-one);
+        cursor: pointer;
+    }
+
+    .skills{
+        margin-top: 2rem;
+        height: 266px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: default;
+    }
+
+    .skill_list{
+        width: calc(100% -3.75rem);
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .skill{
+        width: 10rem;
+        height: 67px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .skill_title{
+        font-size: 32px;
+    }
+
+    .line_top{
+        margin-inline: auto;
+        margin-top: 52px;
+        background-color: var(--text-two);
+        width: 90vw;
+        height: 1px;
+    }
+
+    .line_bottom{
+        margin-inline: auto;
+        background-color: var(--text-two);
+        width: 90vw;
+        height: 1px;
+    }
+
+    .project_header{
+        margin-top: 2.5rem;
+        margin-inline: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 90vw;
+    }
+
+    .project_title{
+        font-size: 40px;
+    }
+
+    .projects_container{
+        margin-inline: auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: 90vw;
+        margin-top: 2.5rem;
+        gap: 2.5rem;
+    }
+
+    .project_card{
+        height: 24.875rem;
+        width: 21.4375rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-direction: column;
+        margin-inline: auto;
+    }
+
+    .project_img{
+        height: 253px;
+        width: 21.4375rem;
+    }
+
+    .project_name{
+        text-transform: uppercase;
+    }
+
+    .languages{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .lang{
+        color: var(--text-two);
+        margin-right: 1rem;
+    }
+
+    .project_btns{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .project_link,
+    .code_link{
+        text-decoration: none;
+        color: var(--text-one);
+    }
+
+    .view_btn{
+        margin-right: 2rem;
+    }
+
+    footer{
+        background-image: url(./assets//images/pattern-rings.svg);
+        background-repeat: no-repeat;
+        background-position: top 40rem left -20rem;
+        width: 100vw;
+        height: 52.125rem;
+        background-color: var(--bg-footer);
+        padding: 5rem 0rem;
+        margin-top: 5rem;
+    }
+
+    .footer_container{
+        width: 80vw;
+        margin-inline: auto;
+    }
+
+    .footer_text{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        height: 8.375rem;
+    }
+
+    .footer_title{
+        font-size: 2.5rem;
+    }
+
+    .footer_description{
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .contact_container{
+        height: 20.4375rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        flex-direction: column;
+        margin-top: 5rem;
+    }
+
+    #input_name,
+    #input_email,
+    #input_msg{
+        width: 100%;
+        background-color: transparent;
+        border: none;
+        border-bottom: 1px solid var(--text-two);
+        outline: none;
+        padding: 1rem;
+        color: var(--text-one);
+        font-family: "Space Grotesk";
+    }
+
+    .error{
+        width: 100%;
+        background-color: transparent;
+        border: none;
+        border-bottom: 1px solid var(--invalid);
+        outline: none;
+        padding: 1rem;
+        color: var(--text-one);
+        font-family: "Space Grotesk";
+    }
+
+    #input_msg{
+        height: 107px;
+    }
+
+    #input_name::placeholder,
+    #input_email::placeholder,
+    #input_msg::placeholder{
+        color: var(--text-two);
+        font-family: "Space Grotesk";
+        font-size: 16px;
+    }
+
+    .name_error_msg,
+    .email_error_msg{
+        color: var(--invalid);
+        font-size: 12px;
+        display: none;
+    }
+
+    .send_msg_btn{
+        font-family: "Space Grotesk", sans-serif;
+        font-family: 16px;
+        text-transform: uppercase;
+        background-color: transparent;
+        letter-spacing: 2.29px;
+        border: none;
+        border-bottom: 2px solid var(--accent);
+        width: 8.875rem;
+        height: 38px;
+        color: var(--text-one);
+        cursor: pointer;
+    }
+    
+}
+
+/* styling contents for desktop */
+
+@media (min-width: 815px) {
+
+    body{
+        background-image: url(./assets//images/pattern-rings.svg), url(./assets/images/pattern-rings.svg);
+        background-repeat: no-repeat;
+        background-position: top 8rem left -5rem, top 60rem right -15rem;
+    }
+
+    header{
+        width: calc(100% - 2rem);
+        height: 720px;
+        max-width: 1110px;
+        margin-inline: auto;
+    }
+
+    .nav_link > svg > path{
+        fill: var(--text-one);
+        transition: ease-in-out 0.15s;
+    }
+
+    .nav_link:hover > svg > path{
+        fill: var(--accent);
+        transition: ease-in-out 0.15s;
+    }
+
+    .logo_container{
+        z-index: 20;
+    }
+
+    .logo{
+        cursor: pointer;
+        z-index: 15;
+        transition: ease-in-out 0.15s;
+    }
+
+    .logo:hover{
+        color: var(--accent);
+        transition: ease-in-out 0.15s;
+    }
+
+    .intro{
+        height: 44.125rem;
+        width: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row-reverse;
+        margin-top: -112px;
+        z-index: 9;
+        position: relative;
+    }
+
+    .intro::after {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: url(./assets/images/pattern-circle.svg);
+        content: " ";
+        background-repeat: no-repeat;
+        top: 30rem;
+        left: 40rem;
+    }
+
+    .intro_img{
+        width: 27.8125rem;
+        height: 44.125rem;
+        background-image: url(./assets/images/IMG_1263.jpg);
+        background-position: center;
+        background-size: cover;
+    }
+
+    .circle_img{
+        display: none;
+    }
+
+    .intro_left{
+        width: 44.125rem;
+        height: 25.4375rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .intro_title{
+        font-size: var(--fs-88);
+        line-height: var(--fs-88);
+    }
+
+    .intro_description{
+        font-size: var(--fs-18);
+        line-height: 28px;
+        width: 27.8125rem;
+    }
+
+    .intro_btn{
+        font-family: "Space Grotesk", sans-serif;
+        font-family: 16px;
+        text-transform: uppercase;
+        background-color: transparent;
+        letter-spacing: 2.29px;
+        border: none;
+        border-bottom: 2px solid var(--accent);
+        width: 120px;
+        height: 38px;
+        color: var(--text-one);
+        cursor: pointer;
+        transition: ease-in-out 0.15s;
+        z-index: 20;
+    }
+
+    .skills{
+        margin-top: 2rem;
+        height: 163.5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: default;
+    }
+
+    .skill_list{
+        width: calc(100% -3.75rem);
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .skill{
+        width: 10rem;
+        height: 67px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .skill_title{
+        font-size: 32px;
+    }
+
+    .line_top{
+        width: 1110px;
+        margin-inline: auto;
+        margin-top: 114px;
+        background-color: var(--text-two);
+        height: 1px;
+    }
+
+    
+    .line_bottom{
+        width: 1110px;
+        margin-inline: auto;
+        background-color: var(--text-two);
+        height: 1px;
+    }
+
+    .project_header{
+        margin-top: 2.5rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 1110px;
+        margin-inline: auto;
+    }
+
+    .project_title{
+        font-size: 40px;
+    }
+
+    .projects_container{
+        width: 1110px;
+        margin-inline: auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin-top: 2.5rem;
+        gap: 2.5rem;
+    }
+
+    .project_card{
+        height: 487px;
+        width: 540px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-direction: column;
+        margin-inline: auto;
+        position: relative;
+    }
+
+    .project_img{
+        height: 400px;
+        width: 540px;
+        cursor: pointer;
+    }
+
+    .project_name{
+        text-transform: uppercase;
+    }
+
+    .languages{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .lang{
+        color: var(--text-two);
+        margin-right: 1rem;
+    }
+
+    .project_btns{
+        position: absolute;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        width: 138px;
+        height: 124px;
+        top: 33.33%; 
+        left: 0; 
+        right: 0; 
+        margin-left: auto; 
+        margin-right: auto; 
+        z-index: 10;
+        opacity: 0;
+        transition: ease-in-out 0.2s;
+    }
+
+    .project_btns:hover,
+    .project_img{
+        z-index: 5;
+        opacity: 0.5;
+        transition: ease-in-out 0.2s; 
+    }
+
+    .project_img:hover ~ .project_btns,
+    .project_btns:hover{
+        opacity: 1;
+        transition: ease-in-out 0.2s;
+    }
+
+    .project_img:hover ~ .project_btns:hover,
+    .project_img:hover{
+        z-index: 5;
+        opacity: 0.5;
+        transition: ease-in-out 0.2s;
+    }
+
+    .project_link,
+    .code_link{
+        text-decoration: none;
+        color: var(--text-one);
+    }
+
+    .view_btn{
+        margin: 0
+    }
+
+    .intro_btn:hover,
+    .intro_btn:hover,
+    .view_btn:hover,
+    .code_btn:hover,
+    .send_msg_btn:hover{
+        color: var(--accent);
+        transition: ease-in-out 0.15s;
+    }
+
+    footer{
+        background-image: url(./assets//images/pattern-rings.svg);
+        background-repeat: no-repeat;
+        background-position: top 30rem left -20rem;
+        width: 100vw;
+        height: 40.0625rem;
+        background-color: var(--bg-footer);
+        padding: 5rem 0rem;
+        margin-top: 5rem;
+    }
+
+    .footer_container{
+        width: 80vw;
+        margin-inline: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .footer_text{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-direction: column;
+        height: 13rem;
+        width: 50%;
+    }
+
+    .footer_title{
+        font-size: var(--fs-88);
+    }
+
+    .footer_description{
+        font-size: 16px;
+        text-align: start;
+        width: 27.8125rem;
+    }
+
+    .contact_container{
+        width: 50%;
+        height: 20.4375rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        flex-direction: column;
+        margin-top: 5rem;
+    }
+
+    #input_name,
+    #input_email,
+    #input_msg{
+        width: 70%;
+        background-color: transparent;
+        border: none;
+        border-bottom: 1px solid var(--text-two);
+        outline: none;
+        padding: 1rem;
+        color: var(--text-one);
+        font-family: "Space Grotesk";
+    }
+
+    .error{
+        width: 100%;
+        background-color: transparent;
+        border: none;
+        border-bottom: 1px solid var(--invalid);
+        outline: none;
+        padding: 1rem;
+        color: var(--text-one);
+        font-family: "Space Grotesk";
+    }
+
+    #input_msg{
+        height: 107px;
+    }
+
+    #input_name::placeholder,
+    #input_email::placeholder,
+    #input_msg::placeholder{
+        color: var(--text-two);
+        font-family: "Space Grotesk";
+        font-size: 16px;
+    }
+
+    .name_error_msg,
+    .email_error_msg{
+        color: var(--invalid);
+        font-size: 12px;
+        display: none;
+    }
+
+    .send_msg_btn{
+        font-family: "Space Grotesk", sans-serif;
+        font-family: 16px;
+        text-transform: uppercase;
+        background-color: transparent;
+        letter-spacing: 2.29px;
+        border: none;
+        border-bottom: 2px solid var(--accent);
+        width: 8.875rem;
+        height: 38px;
+        color: var(--text-one);
+        cursor: pointer;
+    }
+}
+
